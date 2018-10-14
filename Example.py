@@ -8,18 +8,16 @@ import sys
 running = True
 
 # Functions
-def u_input():
-    usr = input('> ')
-    
-    if usr == '1':
-        m.about()
-    elif usr == '2':
-        sys.exit(0)
+def print_info():
+    m.about()
+
+def exitapp():
+    sys.exit(0)
 
 # Main
 m = ETM.Menu(' MyApp ','-')
-m.add_option('Print info')
-m.add_option('Exit')
+ETM.Option('Print info', print_info)
+ETM.Option('Exit', exitapp)
 m.print_all()
-while running == True:    
-    u_input()
+while running == True:
+    m.get_input()
