@@ -21,6 +21,7 @@ def add_opt():
     option = input("Enter new option: ")
     func = input("Enter function that option will execute: ")
     ETM.Option(option, func)
+    m.print_options()
 
 def remove_opt():
     usr = input("Enter option name: ")
