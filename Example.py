@@ -16,6 +16,11 @@ def changetitle():
     usr = input("Enter new title: ")
     m.change_title(' %s '% (usr))
     m.print_menu()
+    
+def add_opt():
+    option = input("Enter new option: ")
+    func = input("Enter function that option will execute: ")
+    ETM.Option(option, func)
 
 def remove_opt():
     usr = input("Enter option name: ")
@@ -34,6 +39,7 @@ def exitapp():
 m = ETM.Menu(' MyApp ','-')
 ETM.Option('Print info', print_info)
 ETM.Option('Change title', changetitle)
+ETM.Option('Create an option', add_opt)
 ETM.Option('Delete an option', remove_opt)
 ETM.Option('Clear options', clear_opt)
 ETM.Option('Exit', exitapp)
