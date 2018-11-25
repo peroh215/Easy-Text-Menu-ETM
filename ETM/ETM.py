@@ -12,13 +12,13 @@ class Menu():
     def __init__(self, title, character, char_length):
         self.title = title
         self.character = character
-		self.char_length = int(char_lenght)
+        self.char_length = int(char_length)
 
     def change_title(self, new_title):
         self.title = new_title
 
     def print_menu(self):
-        print('{0}'*self.char_lenght ,'{1}','{0}'*self.char_length'.format(self.character, self.title))
+        print('{0}'*self.char_lenght ,'{1}','{0}'*self.char_length).format(self.character, self.title)
 
     def print_options(self):
         option_n = 1
@@ -43,21 +43,20 @@ class Menu():
         opt.clear()
 
     def get_input(self):
-        return usr = input('> ')
+        usr = input('> ')
 
         found = False
         for Option in opt:
             if usr == str(Option.index):
                 found = True
-                Option.command()
-            
+                Option.command()           
         if found == True:
             pass
         else:
             print("Invalid command")
         
     def about(self):
-        print('Made by {}\nVersion: {}\nLicense: {}'.format(__author__,__version__,__license__))
+        return print('Made by {}\nVersion: {}\nLicense: {}'.format(__author__,__version__,__license__))
         
 class Option():
     def __init__(self, option, command):
@@ -67,4 +66,3 @@ class Option():
         self.index = index
         opt.append(self)
         index += 1
-        
