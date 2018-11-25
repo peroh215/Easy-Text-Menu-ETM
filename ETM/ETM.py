@@ -18,8 +18,8 @@ class Menu():
         self.title = new_title
 
     def print_menu(self):
-        print('{0}'*self.char_lenght ,'{1}','{0}'*self.char_length).format(self.character, self.title)
-
+        return print('{0}{1}{0}'.format(self.character*self.char_length, self.title))
+                                                                                 
     def print_options(self):
         option_n = 1
         for Option in opt:
