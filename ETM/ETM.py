@@ -2,7 +2,7 @@
 #-*- coding:utf-8 -*-
 
 __author__ = ('Pedro Henrique Santos (Blackman White)')
-__version__ = ('3.0')
+__version__ = ('3.5')
 __license__ = ('GNU General Public License v3.0')
 
 opt = []
