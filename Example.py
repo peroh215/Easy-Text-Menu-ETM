@@ -10,7 +10,7 @@ running = True
 
 # Functions
 def print_info():
-    m.about()
+    return m.about()
 
 def changetitle():
     usr = input("Enter new title: ")
@@ -33,11 +33,10 @@ def clear_opt():
     m.print_all()
 
 def exitapp():
-    sys.exit(0)
-    return None
+    return sys.exit(0)
 
 # Main
-m = ETM.Menu(' MyApp ','-')
+m = ETM.Menu(' MyApp ','-', 10)
 ETM.Option('Print info', print_info)
 ETM.Option('Change title', changetitle)
 ETM.Option('Create an option', add_opt)
